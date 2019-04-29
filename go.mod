@@ -1,7 +1,8 @@
 module github.com/sourcegraph/sourcegraph
 
 require (
-	cloud.google.com/go v0.34.0
+	cloud.google.com/go v0.37.4
+	git.apache.org/thrift.git v0.0.0-20181218151757-9b75e4fe745a // indirect
 	github.com/NYTimes/gziphandler v1.1.1
 	github.com/aws/aws-sdk-go-v2 v0.7.0
 	github.com/beevik/etree v0.0.0-20180609182452-90dafc1e1f11
@@ -44,14 +45,17 @@ require (
 	github.com/golang-migrate/migrate/v4 v4.2.3
 	github.com/golang/gddo v0.0.0-20181116215533-9bd4a3295021
 	github.com/golang/groupcache v0.0.0-20180513044358-24b0969c4cb7
+	github.com/golang/protobuf v1.3.1 // indirect
 	github.com/golangci/golangci-lint v1.16.0
 	github.com/golangplus/bytes v0.0.0-20160111154220-45c989fe5450 // indirect
 	github.com/golangplus/fmt v0.0.0-20150411045040-2a5d6d7d2995 // indirect
 	github.com/golangplus/testing v0.0.0-20180327235837-af21d9c3145e // indirect
 	github.com/gomodule/redigo v2.0.0+incompatible // indirect
+	github.com/google/btree v1.0.0 // indirect
 	github.com/google/go-cmp v0.2.0
 	github.com/google/go-github v17.0.0+incompatible
 	github.com/google/go-querystring v1.0.0
+	github.com/google/pprof v0.0.0-20190404155422-f8f10df84213 // indirect
 	github.com/google/uuid v1.1.0
 	github.com/google/zoekt v0.0.0-20180530125106-8e284ca7e964
 	github.com/gorilla/context v1.1.1
@@ -64,7 +68,9 @@ require (
 	github.com/goware/urlx v0.2.0
 	github.com/graph-gophers/graphql-go v0.0.0-20190204230732-e582242c92cc
 	github.com/gregjones/httpcache v0.0.0-20190212212710-3befbb6ad0cc
+	github.com/grpc-ecosystem/grpc-gateway v1.6.2 // indirect
 	github.com/hashicorp/go-multierror v1.0.0
+	github.com/hashicorp/golang-lru v0.5.1 // indirect
 	github.com/honeycombio/libhoney-go v1.8.1
 	github.com/jmoiron/sqlx v1.2.0
 	github.com/joho/godotenv v1.3.0
@@ -92,16 +98,13 @@ require (
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.1 // indirect
 	github.com/neelance/parallel v0.0.0-20160708114440-4de9ce63d14c
-	github.com/onsi/ginkgo v1.7.0 // indirect
-	github.com/onsi/gomega v1.4.3 // indirect
 	github.com/opentracing-contrib/go-stdlib v0.0.0-20190324214902-3020fec0e66b
 	github.com/opentracing/opentracing-go v1.1.0
 	github.com/peterhellberg/link v1.0.0
 	github.com/pkg/errors v0.8.1
 	github.com/pquerna/cachecontrol v0.0.0-20180517163645-1555304b9b35 // indirect
-	github.com/prometheus/client_golang v0.9.2
+	github.com/prometheus/client_golang v0.9.3-0.20190127221311-3c4408c8b829
 	github.com/prometheus/client_model v0.0.0-20190129233127-fd36f4220a90 // indirect
-	github.com/prometheus/common v0.2.0 // indirect
 	github.com/prometheus/procfs v0.0.0-20190209105433-f8d8b3f739bd // indirect
 	github.com/russellhaering/gosaml2 v0.3.2-0.20190403162508-649841e7f48a
 	github.com/russellhaering/goxmldsig v0.0.0-20180430223755-7acd5e4a6ef7
@@ -141,9 +144,12 @@ require (
 	github.com/xeipuuv/gojsonschema v0.0.0-20180816142147-da425ebb7609
 	github.com/xeonx/timeago v1.0.0-rc3
 	github.com/zenazn/goji v0.9.0 // indirect
-	go.opencensus.io v0.19.0 // indirect
 	go.uber.org/atomic v1.3.2 // indirect
 	golang.org/x/crypto v0.0.0-20190426145343-a29dc8fdc734
+	golang.org/x/exp v0.0.0-20190429183610-475c5042d3f1 // indirect
+	golang.org/x/image v0.0.0-20190424155947-59b11bec70c7 // indirect
+	golang.org/x/lint v0.0.0-20190409202823-959b441ac422 // indirect
+	golang.org/x/mobile v0.0.0-20190415191353-3e0bab5405d6 // indirect
 	golang.org/x/net v0.0.0-20190424112056-4829fb13d2c6
 	golang.org/x/oauth2 v0.0.0-20190426200222-9f3314589c9a
 	golang.org/x/sync v0.0.0-20190423024810-112230192c58
@@ -151,9 +157,10 @@ require (
 	golang.org/x/text v0.3.2 // indirect
 	golang.org/x/time v0.0.0-20190401211219-9d24e82272b4
 	golang.org/x/tools v0.0.0-20190429184909-35c670923e21
-	google.golang.org/api v0.1.0 // indirect
-	google.golang.org/genproto v0.0.0-20190215211957-bd968387e4aa // indirect
-	google.golang.org/grpc v1.18.0 // indirect
+	google.golang.org/api v0.4.0 // indirect
+	google.golang.org/appengine v1.5.0 // indirect
+	google.golang.org/genproto v0.0.0-20190425155659-357c62f0e4bb // indirect
+	google.golang.org/grpc v1.20.1 // indirect
 	gopkg.in/alexcesaro/statsd.v2 v2.0.0 // indirect
 	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
 	gopkg.in/go-playground/validator.v8 v8.18.2 // indirect
@@ -163,6 +170,7 @@ require (
 	gopkg.in/square/go-jose.v2 v2.1.9 // indirect
 	gopkg.in/src-d/go-git.v4 v4.8.0
 	gopkg.in/yaml.v2 v2.2.2
+	honnef.co/go/tools v0.0.0-20190418001031-e561f6794a2a // indirect
 	sourcegraph.com/sqs/pbtypes v1.0.0 // indirect
 )
 
